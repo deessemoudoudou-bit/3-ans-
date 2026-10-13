@@ -1,0 +1,15 @@
+LOVE PAGE — EZÉCHIEL & LISA — VERSION CORRIGÉE
+
+Cette version enregistre les photos, vidéos, la musique choisie et la lettre personnalisée dans le stockage local du navigateur (IndexedDB). Elles réapparaissent sur le même appareil et le même navigateur après fermeture/réouverture, tant que les données du site ne sont pas effacées. Garde aussi les originaux dans ton téléphone.
+
+IMPORTANT : ce stockage local n’envoie pas les fichiers à GitHub. Pour que les visiteurs de ton site en ligne voient les médias, il faut téléverser les fichiers dans le dépôt GitHub puis ajouter leurs chemins dans le code. Le site ne peut pas publier automatiquement dans ton compte GitHub sans connexion sécurisée.
+
+POUR REMPLACER LE SITE :
+1. Décompresse ce ZIP.
+2. Dans le dépôt GitHub Love-page-final, remplace index.html par le nouveau index.html et valide le commit.
+3. Attends le déploiement GitHub Pages, puis recharge le site dans Chrome.
+4. Ouvre le menu secret ✦ et sélectionne tes fichiers.
+
+Pour les médias visibles par tous : téléverse les fichiers au dépôt (par exemple dans un dossier media), puis ajoute les références de ces fichiers dans la galerie et le lecteur audio. Pour “Heaven Baby”, sélectionne un fichier audio que tu as le droit d’utiliser.
+
+Ne vide pas les données de Chrome si tu veux conserver les médias enregistrés localement.
