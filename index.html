@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090707">
+<title>Ezéchiel & Lisa — En souvenir de nous</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
+:root{--gold:#d8b46a;--cream:#fff4df;--red:#8f1728;--black:#090707}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#281117 0,#10090b 48%,#050505 100%);color:var(--cream);font-family:'Cormorant Garamond',serif;text-align:center;overflow-x:hidden}
+section{padding:65px 20px;max-width:900px;margin:auto}.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:30px 18px}
+.rose{font-size:42px;filter:drop-shadow(0 0 15px #a42b3c);animation:float 3s ease-in-out infinite}
+h1{font-family:'Great Vibes',cursive;color:var(--gold);font-size:clamp(3.3rem,12vw,6.5rem);font-weight:400;margin:12px 0}
+h2{font-family:'Great Vibes',cursive;color:var(--gold);font-size:clamp(2.5rem,8vw,4rem);font-weight:400;margin:0 0 18px}
+.date{letter-spacing:5px;color:#f0d7a1;font-size:1rem;margin:10px 0 20px}.tagline{font-size:1.25rem;max-width:550px;line-height:1.6}
+button,.btn{border:1px solid var(--gold);background:linear-gradient(135deg,#27130e,#4a1a20);color:var(--cream);padding:12px 20px;border-radius:28px;font:inherit;font-size:1.05rem;cursor:pointer;margin:7px;transition:.25s}
+button:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 0 18px #d8b46a55}
+.card{border:1px solid #d8b46a55;background:#160d0dbb;border-radius:20px;padding:25px;margin:18px auto;box-shadow:0 10px 35px #0005}
+.letter{font-size:1.22rem;line-height:1.85;text-align:left;white-space:pre-line}.gold{color:var(--gold)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px}.gallery img,.gallery video{width:100%;max-height:320px;object-fit:cover;border-radius:12px;border:1px solid #d8b46a66}
+.hidden{display:none!important}#manage{position:fixed;inset:0;background:#070505f5;z-index:10;overflow:auto;padding:22px;display:none}#manage.open{display:block}
+.managebox{max-width:650px;margin:20px auto;text-align:left;border:1px solid var(--gold);border-radius:18px;padding:20px;background:#180e10}
+label{display:block;margin:14px 0 5px;color:var(--gold)}input[type=file],input[type=text],textarea{width:100%;padding:10px;background:#0c0909;color:white;border:1px solid #765a36;border-radius:8px}
+small,.note{color:#c9bba7;font-size:.95rem;line-height:1.5}footer{padding:25px;color:#b7a58a}.heart{color:#bc3146;animation:pulse 1.2s infinite;display:inline-block}
+#surprise{font-size:3rem;color:var(--gold);min-height:65px}
+@keyframes float{50%{transform:translateY(-8px)}}@keyframes pulse{50%{transform:scale(1.2)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="rose">🌹</div>
+  <p class="date">26 • 10 • 2023</p>
+  <h1>Ezéchiel &amp; Lisa</h1>
+  <p class="tagline">Une histoire. Un amour. Une rencontre.<br><span class="gold">En souvenir de nous.</span></p>
+  <div style="margin-top:20px"><button onclick="document.querySelector('#lettre').scrollIntoView({behavior:'smooth'})">Lire notre lettre ♡</button><button onclick="document.querySelector('#souvenirs').scrollIntoView({behavior:'smooth'})">Nos souvenirs ✨</button></div>
+  <p class="note">Deux cœurs, un souvenir qui garde sa lumière.</p>
+</header>
+<section id="lettre">
+  <h2>Quelques mots pour toi</h2>
+  <div class="card letter" id="letterText">Mon Ezéchiel,
+
+Il y a des rencontres qui laissent une trace dans le cœur, et la nôtre fait partie de ces souvenirs que je garde précieusement. Depuis le 26 octobre 2023, cette date porte une histoire, des émotions, des sourires et des moments qui nous appartiennent.
+
+Je ne sais pas ce que la vie nous réserve, mais je sais que ce que nous avons partagé a compté. Même les petits instants, les mots, les silences et les souvenirs ont leur place dans mon cœur.
+
+Cette page est un petit jardin de nos souvenirs : une rose pour la tendresse, une lumière pour les moments heureux, et une mélodie pour tout ce que les mots ne savent pas toujours dire.
+
+En souvenir de nous, de notre histoire et de ce qu'elle a représenté.
+
+Avec tendresse,
+Lisa ❤️</div>
+</section>
+<section id="surpriseSection">
+  <h2>Une petite surprise</h2>
+  <div class="card"><div id="surprise">3</div><button onclick="surprise()">Découvrir la surprise ✨</button><p id="surpriseText" class="note"></p></div>
+</section>
+<section id="souvenirs">
+  <h2>Nos souvenirs</h2>
+  <p class="note">Les fichiers ajoutés sont conservés dans le stockage de ce navigateur sur cet appareil. Pour les montrer aux autres visiteurs en ligne, suis le guide Lisez-moi.txt inclus dans le ZIP.</p>
+  <div class="gallery" id="gallery"><p class="note" style="grid-column:1/-1">Tes photos et vidéos ajoutées sont conservées sur cet appareil et dans ce navigateur. Pour les montrer aux visiteurs en ligne, il faut aussi publier les fichiers dans GitHub.</p></div>
+</section>
+<section id="musique">
+  <h2>Notre mélodie</h2>
+  <div class="card">
+    <p class="gold">Une chanson pour accompagner nos souvenirs</p>
+    <p>Choisis <strong>“Heaven Baby” d’Ayra Starr</strong> dans les fichiers de ton téléphone si tu as le fichier audio.</p>
+    <audio id="player" controls style="width:100%;margin:10px 0"></audio>
+    <p id="musicName" class="note">Aucune musique sélectionnée pour le moment.</p>
+  </div>
+</section>
+<section>
+  <div class="rose">🌹 🤍 🌹</div>
+  <h2>En souvenir de nous</h2>
+  <p class="tagline">Que les beaux souvenirs restent des étoiles, même quand le ciel change.</p>
+  <p style="font-size:1.5rem">Ezéchiel <span class="heart">♥</span> Lisa</p>
+</section>
+<footer>Fait avec amour · 26.10.2023</footer>
+<button aria-label="Ouvrir le menu secret" title="Menu secret" onclick="openManage()" style="position:fixed;right:12px;bottom:12px;width:46px;height:46px;padding:0;border-radius:50%;background:#130d0dcc">✦</button>
+<div id="manage">
+  <div class="managebox">
+    <h2 style="text-align:center">Coin secret ✨</h2>
+    <p class="note">Ce menu est caché aux visiteurs. Ajoute ici tes souvenirs et ta musique.</p>
+    <label for="photos">Ajouter des photos</label><input id="photos" type="file" accept="image/*" multiple>
+    <label for="videos">Ajouter des vidéos</label><input id="videos" type="file" accept="video/*" multiple>
+    <label for="musicFile">Choisir une musique depuis le téléphone</label><input id="musicFile" type="file" accept="audio/*">
+    <p class="note">Pour “Heaven Baby”, sélectionne le fichier audio que tu as sur ton téléphone. Le site ne contient pas la chanson préinstallée.</p>
+    <label for="customLetter">Modifier la lettre (facultatif)</label><textarea id="customLetter" rows="6" placeholder="Écris ou colle ta lettre ici…"></textarea>
+    <button onclick="saveLetter()">Afficher ma lettre</button>
+    <button onclick="closeManage()">Terminer</button>
+  </div>
+</div>
+<script>
+const DB_NAME='ezechielLisaSouvenirs',DB_VERSION=1;let db;
+const gallery=document.getElementById('gallery'),player=document.getElementById('player');
+function openDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,DB_VERSION);r.onupgradeneeded=()=>{const d=r.result;if(!d.objectStoreNames.contains('media'))d.createObjectStore('media',{keyPath:'id',autoIncrement:true});if(!d.objectStoreNames.contains('settings'))d.createObjectStore('settings',{keyPath:'key'});};r.onsuccess=()=>{db=r.result;resolve(db)};r.onerror=()=>reject(r.error)})}
+function save(store,obj){return new Promise((resolve,reject)=>{const tx=db.transaction(store,'readwrite');tx.objectStore(store).put(obj);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}
+function all(store){return new Promise((resolve,reject)=>{const r=db.transaction(store,'readonly').objectStore(store).getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+function openManage(){document.getElementById('manage').classList.add('open')}
+function closeManage(){document.getElementById('manage').classList.remove('open')}
+async function refresh(){gallery.querySelectorAll('img,video').forEach(e=>{if(e.dataset.url)URL.revokeObjectURL(e.dataset.url);e.remove()});const items=await all('media');let count=0;for(const x of items){if(x.kind==='audio')continue;const el=document.createElement(x.kind==='image'?'img':'video');const url=URL.createObjectURL(x.blob);el.src=url;el.dataset.url=url;el.alt=x.name||'Souvenir';if(x.kind==='video')el.controls=true;gallery.appendChild(el);count++}if(!count){const p=document.createElement('p');p.className='note';p.id='emptyMsg';p.style.gridColumn='1/-1';p.textContent='Tes photos et vidéos apparaîtront ici après ajout.';gallery.appendChild(p)}const audio=items.filter(x=>x.kind==='audio').slice(-1)[0];if(audio){player.src=URL.createObjectURL(audio.blob);document.getElementById('musicName').textContent='Musique enregistrée : '+audio.name}else{document.getElementById('musicName').textContent='Aucune musique sélectionnée pour le moment.'}}
+async function saveFiles(files,kind){try{for(const f of files)await save('media',{kind,name:f.name,type:f.type,blob:f,addedAt:Date.now()});await refresh()}catch(e){alert('Le navigateur a refusé de sauvegarder ces fichiers. Essaie des fichiers plus petits et vérifie que tu ouvres le site dans Chrome.')}}
+document.getElementById('photos').addEventListener('change',async e=>{if(e.target.files.length)await saveFiles([...e.target.files],'image');e.target.value='' });
+document.getElementById('videos').addEventListener('change',async e=>{if(e.target.files.length)await saveFiles([...e.target.files],'video');e.target.value='' });
+document.getElementById('musicFile').addEventListener('change',async e=>{if(e.target.files.length)await saveFiles([e.target.files[0]],'audio');e.target.value='' });
+async function saveLetter(){const t=document.getElementById('customLetter').value.trim();if(t){await save('settings',{key:'letter',value:t});document.getElementById('letterText').textContent=t}closeManage()}
+function surprise(){const box=document.getElementById('surprise'),txt=document.getElementById('surpriseText');let n=3;box.textContent='3';txt.textContent='';const timer=setInterval(()=>{n--;if(n>0)box.textContent=n;else{clearInterval(timer);box.textContent='💖';txt.textContent='Peu importe la distance ou le temps, les souvenirs sincères gardent toujours une place particulière.';confetti()}},700)}
+function confetti(){for(let i=0;i<45;i++){const s=document.createElement('span');s.textContent=['♥','✦','🌹','✨'][Math.floor(Math.random()*4)];s.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:-25px;z-index:20;font-size:${14+Math.random()*18}px;pointer-events:none;transition:transform 2.5s linear,opacity 2.5s;`;document.body.appendChild(s);requestAnimationFrame(()=>{s.style.transform=`translateY(${70+Math.random()*90}vh) rotate(${Math.random()*360}deg)`;s.style.opacity='0'});setTimeout(()=>s.remove(),2700)}}
+(async()=>{try{await openDB();await refresh();const settings=await all('settings');const l=settings.find(x=>x.key==='letter');if(l){document.getElementById('letterText').textContent=l.value;document.getElementById('customLetter').value=l.value}}catch(e){console.error(e);alert('Le navigateur ne permet pas le stockage persistant. Ouvre le lien dans Chrome et vérifie les paramètres de stockage du site.')}})();
+</script>
+</body></html>
